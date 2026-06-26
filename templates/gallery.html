@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images - MtaaniStore</title>
+
+    {% load static   %}
+
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Gallery Page</h1>
+    <p>The folowing are examples of the products we sell.</p>
+
+    <div class="gallery-container">
+        <img src="{% static 'images/audiodevices.png' %}" alt="Sample Image">
+        <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
+    </div>
+
+
+    
+</body>
+</html>
