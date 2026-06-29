@@ -4,10 +4,12 @@ from django.urls import path
 from storeapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
     path('home/', views.home, name='home'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('gallery/', views.gallery, name='gallery'),
+    path('services/', views.services, name='services'),
+    path('products/', views.products, name='products'),
 ]
 

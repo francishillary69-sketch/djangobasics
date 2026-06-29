@@ -6,248 +6,110 @@
     <title>Contact Us</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background: #f5f7fa;
             color: #333;
         }
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
+
         .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 24px;
             background: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
-        h1, h2 {
+
+        h1 {
+            margin-top: 0;
             color: #2c3e50;
         }
-        .form-group {
-            margin-bottom: 15px;
+
+        .alert {
+            padding: 12px 15px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            background: #e8f7ed;
+            color: #1f7a3f;
         }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
         label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-bottom: 6px;
+            font-weight: 600;
         }
-        input[type="text"], input[type="email"], textarea {
+
+        input, textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 6px;
             box-sizing: border-box;
         }
+
         button {
-            background-color: #2c3e50;
+            background: #2c3e50;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 16px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 1em;
         }
+
         button:hover {
-            background-color: #34495e;
+            background: #1f2d3d;
         }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            background-color: #eeedf2;
-            color: #777;
-            font-size: 0.9em;
+
+        .contact-info {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Our Company</h1>
-        <nav>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
     <div class="container">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to work together? Drop us a message using the form below or reach out directly via email.</p>
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you. Send us a message and we will get back to you soon.</p>
 
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully (Demo only)!');">
+        {% if success %}
+            <div class="alert">Thanks! Your message has been received.</div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="name" name="name" required>
             </div>
+
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <input type="email" id="email" name="email" required>
             </div>
+
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit">Send Message</button>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="email"], textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        button:hover {
-            background-color: #34495e;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            background-color: #eeedf2;
-            color: #777;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
 
-    <header>
-        <h1>Our Company</h1>
-        <nav>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to work together? Drop us a message using the form below or reach out directly via email.</p>
-        
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully (Demo only)!');">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
-            </div>
             <button type="submit">Send Message</button>
         </form>
-        
-        <h3 style="margin-top: 30px;">Other Ways to Reach Us</h3>
-        <p><strong>Email:</strong> info@ourcompany.com</p>
-        <p><strong>Phone:</strong> +1 (555) 019-2834</p>
+
+        <div class="contact-info">
+            <p><strong>Email:</strong> info@mtaanistore.com</p>
+            <p><strong>Phone:</strong> +254 700 000 000</p>
+        </div>
     </div>
-
-    <footer>
-        &copy; 2026 Our Company. All rights reserved.
-    </footer>
-
 </body>
 </html>
-        }
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="email"], textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+
             box-sizing: border-box;
         }
         button {

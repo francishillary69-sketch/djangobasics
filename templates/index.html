@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>Welcome to MtaaniStore</h1>
+
+    <a href="{% url 'gallery' %}">Gallery</a>
+    <a href="{% url 'services' %}">Services</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'products' %}">Products</a>
+
     <p>We sell a variety of electronic devices at competitive prices.We are committed to providing the best customer service and the highest quality products.Our products mainly include a variety of phone accessories from trusted brands worldwide.</p>
     <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Services Page - Mtaani Store</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <h1 class="text-center text-danger">Our Services</h1>
+    <p>We offer a wide range of services to meet your needs. Our team is dedicated to providing top-notch support and assistance for all your electronic device requirements.</p>
+    <ul>
+        <h2>Service Offered</h2>
+        <li>Device Repair and Maintenance</li>
+        <li>Product Consultation and Recommendations</li>
+        <li>Custom Orders and Special Requests</li>
+        <li>Warranty and Support Services</li>
+        <h2>Service Images</h2>
+        <img src="{% static 'images/audiodevices.png' %}" alt="Sample Image">
+        <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
+        <img src="{% static 'images/phoneaccessories.png' %}" alt="Sample Image">
+        <img src="{% static 'images/chargingdevices.png' %}" alt="Sample Image">
+
+    </ul>
+</body>
+</html>
