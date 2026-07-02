@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - MtaaniStore</title>
-    {% load static   %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/employee-form.css' %}">
 </head>
 <body>
     <h1>Welcome to MtaaniStore</h1>
@@ -17,5 +18,71 @@
 
     <p>We sell a variety of electronic devices at competitive prices.We are committed to providing the best customer service and the highest quality products.Our products mainly include a variety of phone accessories from trusted brands worldwide.</p>
     <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
+
+
+    <!-- Employee Form -->
+    <div class="employee-form-wrapper">
+        <h2>Employee Registration</h2>
+        {% if saved %}
+            <div class="success-message">Employee registered successfully.</div>
+        {% endif %}
+        <form method="post" class="employee-form">
+            {% csrf_token %}
+
+            <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Full Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="phone-field" class="pb-2">Phone Number</label>
+                  <input type="text" class="form-control" name="phone" id="phone-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="gender-field" class="pb-2">Gender</label>
+                  <input type="text" class="form-control" name="gender" id="gender-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="department-field" class="pb-2">Department</label>
+                  <input type="text" class="form-control" name="department" id="department-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="title-field" class="pb-2">Job Title</label>
+                  <input type="text" class="form-control" name="title" id="title-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="salary-field" class="pb-2">Salary</label>
+                  <input type="text" class="form-control" name="salary" id="salary-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="date-field" class="pb-2">Hire Date</label>
+                  <input type="date" class="form-control" name="hire_date" id="date-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="address-field" class="pb-2">Address</label>
+                  <textarea class="form-control" name="address" rows="10" id="address-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12">
+                    <button type="submit" class="employee-submit-btn">Register Employee</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
