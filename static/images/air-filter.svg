@@ -1,0 +1,14 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f0f0f0"/>
+  <rect x="50" y="40" width="100" height="120" fill="#E8E8E8" stroke="#666" stroke-width="2" rx="5"/>
+  <line x1="60" y1="50" x2="60" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="70" y1="50" x2="70" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="80" y1="50" x2="80" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="90" y1="50" x2="90" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="100" y1="50" x2="100" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="110" y1="50" x2="110" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="120" y1="50" x2="120" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="130" y1="50" x2="130" y2="150" stroke="#999" stroke-width="1"/>
+  <circle cx="100" cy="160" r="6" fill="#FF6B6B"/>
+  <text x="100" y="178" text-anchor="middle" font-size="14" fill="#333">Air Filter</text>
+</svg>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images - MtaaniStore</title>
+    <title>Vehicle Spare Parts Gallery - Salama Sales Ltd</title>
 
     {% load static   %}
 
@@ -18,18 +18,55 @@
         }
         h1 {
             text-align: center;
+            color: #333;
+            margin-bottom: 10px;
         }
-        
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-container img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
 
-    <h1>Gallery Page</h1>
-    <p>The folowing are examples of the products we sell.</p>
+    <h1>Vehicle Spare Parts Gallery</h1>
+    <p class="description">Explore our comprehensive collection of quality vehicle spare parts and components.</p>
 
     <div class="gallery-container">
-        <img src="{% static 'images/audiodevices.png' %}" alt="Sample Image">
-        <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
+        <img src="{% static 'images/brake-pads.svg' %}" alt="Brake Pads">
+        <img src="{% static 'images/air-filter.svg' %}" alt="Air Filter">
+        <img src="{% static 'images/battery.svg' %}" alt="Battery">
+        <img src="{% static 'images/spark-plug.svg' %}" alt="Spark Plug">
+        <img src="{% static 'images/oil-filter.svg' %}" alt="Oil Filter">
+        <img src="{% static 'images/tire.svg' %}" alt="Tire">
+        <img src="{% static 'images/radiator.svg' %}" alt="Radiator">
+        <img src="{% static 'images/alternator.svg' %}" alt="Alternator">
+        <img src="{% static 'images/fuel-pump.svg' %}" alt="Fuel Pump">
+        <img src="{% static 'images/shock-absorber.svg' %}" alt="Shock Absorber">
+        <img src="{% static 'images/headlight.svg' %}" alt="Headlight">
     </div>
 
 
