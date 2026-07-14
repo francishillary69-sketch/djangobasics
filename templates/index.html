@@ -11,14 +11,41 @@
 <body>
     <h1>Welcome to Salama Sales Ltd</h1>
 
-    <a href="{% url 'gallery' %}">Gallery</a>
-    <a href="{% url 'services' %}">Services</a>
-    <a href="{% url 'contact' %}">Contact</a>
-    <a href="{% url 'about' %}">About</a>
-    <a href="{% url 'products' %}">Products</a>
+    <nav style="margin: 1rem 0; padding: 1rem; background: rgba(32, 201, 151, 0.1); border-radius: 8px;">
+        <a href="{% url 'gallery' %}">Gallery</a> |
+        <a href="{% url 'services' %}">Services</a> |
+        <a href="{% url 'contact' %}">Contact</a> |
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'products' %}">Products</a>
+    </nav>
 
-    <p>We supply quality vehicle spare parts at competitive prices. We are committed to providing the best customer service and the highest quality products. Our products include a comprehensive range of spare parts from trusted manufacturers worldwide.</p>
-    <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
+    <section style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #1a2f4a 0%, #16273a 100%); border-radius: 8px; border-left: 4px solid #20c997;">
+        <h2 style="color: #4db8ff;">Welcome to Salama Sales Ltd</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6;">We are your premier destination for <strong>high-quality vehicle sales and comprehensive repair services</strong>. With over a decade of experience in the automotive industry, Salama Sales Ltd is committed to providing exceptional customer service and premium products.</p>
+        <p style="font-size: 1rem;">Whether you're looking to purchase a reliable vehicle or need expert repair services, we have the expertise and inventory to meet all your automotive needs. Our dedicated team is passionate about vehicles and committed to your satisfaction.</p>
+    </section>
+
+    <section style="margin: 2rem 0;">
+        <h2 style="color: #4db8ff; margin-bottom: 1.5rem;">Featured Spare Parts & Services</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div style="text-align: center; padding: 1rem; background: rgba(32, 201, 151, 0.1); border-radius: 8px;">
+                <img src="{% static 'images/tire.svg' %}" alt="Tire" style="width: 120px; height: 120px; margin-bottom: 0.5rem;">
+                <p><strong>Premium Tires</strong></p>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: rgba(32, 201, 151, 0.1); border-radius: 8px;">
+                <img src="{% static 'images/battery.svg' %}" alt="Battery" style="width: 120px; height: 120px; margin-bottom: 0.5rem;">
+                <p><strong>Batteries & Electrical</strong></p>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: rgba(32, 201, 151, 0.1); border-radius: 8px;">
+                <img src="{% static 'images/brake-pads.svg' %}" alt="Brake Pads" style="width: 120px; height: 120px; margin-bottom: 0.5rem;">
+                <p><strong>Brake Systems</strong></p>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: rgba(32, 201, 151, 0.1); border-radius: 8px;">
+                <img src="{% static 'images/engine.svg' %}" alt="Engine" style="width: 120px; height: 120px; margin-bottom: 0.5rem;">
+                <p><strong>Engine Repair</strong></p>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Employee Form -->

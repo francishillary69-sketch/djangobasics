@@ -11,20 +11,69 @@
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </head>
 <body>
-    <h1 class="text-center text-danger">Our Services</h1>
-    <p>We offer a wide range of services to meet your needs. Our team is dedicated to providing top-notch support and assistance for all your electronic device requirements.</p>
-    <ul>
-        <h2>Service Offered</h2>
-        <li>Device Repair and Maintenance</li>
-        <li>Product Consultation and Recommendations</li>
-        <li>Custom Orders and Special Requests</li>
-        <li>Warranty and Support Services</li>
-        <h2>Service Images</h2>
-        <img src="{% static 'images/audiodevices.png' %}" alt="Sample Image">
-        <img src="{% static 'images/mobileconnectivity.png' %}" alt="Sample Image">
-        <img src="{% static 'images/phoneaccessories.png' %}" alt="Sample Image">
-        <img src="{% static 'images/chargingdevices.png' %}" alt="Sample Image">
+    <h1 class="text-center" style="color: #4db8ff; margin-bottom: 1rem;">Our Automotive Services</h1>
+    
+    <section style="margin: 2rem auto; max-width: 1000px; padding: 0 1rem;">
+        <p style="font-size: 1.1rem; text-align: center; color: #e8f0f7; margin-bottom: 2rem;">At Salama Sales Ltd, we offer comprehensive automotive services to keep your vehicle running smoothly. Our team of certified technicians is dedicated to providing professional, reliable, and affordable service.</p>
+        
+        <div style="background: linear-gradient(135deg, #1a2f4a 0%, #16273a 100%); padding: 2rem; border-radius: 8px; border-left: 4px solid #20c997; margin-bottom: 2rem;">
+            <h2 style="color: #4db8ff;">Vehicle Repair Services</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Engine Repair and Overhaul</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Transmission Service and Repair</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Brake System Service</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Suspension and Steering Repair</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Electrical System Diagnostics</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Air Conditioning Service</li>
+            </ul>
+        </div>
 
-    </ul>
+        <div style="background: linear-gradient(135deg, #1a2f4a 0%, #16273a 100%); padding: 2rem; border-radius: 8px; border-left: 4px solid #20c997; margin-bottom: 2rem;">
+            <h2 style="color: #4db8ff;">Vehicle Sales & Consulting</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Quality Used Vehicle Sales</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Vehicle Selection Consultation</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Pre-Purchase Vehicle Inspection</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Trade-in Valuation</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Financing Options</li>
+            </ul>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #1a2f4a 0%, #16273a 100%); padding: 2rem; border-radius: 8px; border-left: 4px solid #20c997; margin-bottom: 2rem;">
+            <h2 style="color: #4db8ff;">Spare Parts & Maintenance</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Genuine and Aftermarket Parts</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Routine Maintenance (Oil Changes, Filters)</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Tire Sales and Service</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Battery Service and Replacement</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Custom Orders and Special Requests</li>
+                <li style="padding: 0.5rem 0; color: #e8f0f7;"><span style="color: #20c997;">✓</span> Warranty Support on Parts</li>
+            </ul>
+        </div>
+
+        <h2 style="color: #4db8ff; text-align: center; margin-top: 3rem; margin-bottom: 1.5rem;">Featured Parts & Services</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(32, 201, 151, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; border-top: 4px solid #20c997;">
+                <img src="{% static 'images/brake-pads.svg' %}" alt="Brake Pads" style="width: 100px; height: 100px; margin-bottom: 1rem;">
+                <h3 style="color: #4db8ff; margin-bottom: 0.5rem;">Brake Systems</h3>
+                <p style="color: #e8f0f7;">Quality brake pads, rotors, and fluid for safe stopping</p>
+            </div>
+            <div style="background: rgba(32, 201, 151, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; border-top: 4px solid #20c997;">
+                <img src="{% static 'images/tire.svg' %}" alt="Tires" style="width: 100px; height: 100px; margin-bottom: 1rem;">
+                <h3 style="color: #4db8ff; margin-bottom: 0.5rem;">Premium Tires</h3>
+                <p style="color: #e8f0f7;">All-season, off-road, and specialty tires available</p>
+            </div>
+            <div style="background: rgba(32, 201, 151, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; border-top: 4px solid #20c997;">
+                <img src="{% static 'images/battery.svg' %}" alt="Battery" style="width: 100px; height: 100px; margin-bottom: 1rem;">
+                <h3 style="color: #4db8ff; margin-bottom: 0.5rem;">Electrical Systems</h3>
+                <p style="color: #e8f0f7;">Batteries, alternators, and starter motors</p>
+            </div>
+            <div style="background: rgba(32, 201, 151, 0.1); padding: 1.5rem; border-radius: 8px; text-align: center; border-top: 4px solid #20c997;">
+                <img src="{% static 'images/oil-filter.svg' %}" alt="Oil Filter" style="width: 100px; height: 100px; margin-bottom: 1rem;">
+                <h3 style="color: #4db8ff; margin-bottom: 0.5rem;">Engine Filters</h3>
+                <p style="color: #e8f0f7;">Oil, air, and fuel filters for optimal engine performance</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
